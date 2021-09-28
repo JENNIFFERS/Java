@@ -1,0 +1,26 @@
+
+import java.lang.*;
+import java.io.*;
+public class LargestPalindromefactor {
+
+    public static void main(String[] args) {
+        int val = 0;
+        for(int i = 100;i <=999;i++)
+        {
+            for(int j = i;j <=999;j++)
+            {
+                int val1 = i * j;
+                StringBuilder sb1 = new StringBuilder(""+val1);
+                String sb2 = ""+val1;
+                sb1.reverse();
+                if(sb2.equals(sb1.toString()) && val<val1) {
+                    val = val1;
+
+                }
+
+            }
+        }
+
+        System.out.println("Largest palindrome made from the product of two 3-digit numbers is: "+val);
+   }
+   }
