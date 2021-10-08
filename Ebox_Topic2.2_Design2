@@ -1,0 +1,47 @@
+import java.util.Scanner;
+import java.io.*;
+public class Ebox_Topic2.2_Design2
+{
+    public static void main(String args[])
+    {
+        String s1,s2;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Address 1:");
+        s1=sc.nextLine();
+        System.out.println("Address 2:");
+        s2 = sc.nextLine();
+        int count=0,count1=0;
+        for(int i=0;i<s1.length();i++)
+        {
+            if(s1.charAt(i)==' ')
+            {
+                count++;
+            }
+        }
+        for(int i=0;i<s2.length();i++)
+        {
+            if(s2.charAt(i)==' ')
+            {
+                count1++;
+            }
+        }
+        String str1=s1.replaceAll("\\s","");
+        String str2=s2.replaceAll("\\s","");
+    if(s1.equals(s2) == true)
+        {
+            System.out.println("RED");
+        }
+    else if(s1.equalsIgnoreCase(s2) == true && s1.equals(s2) == false)
+        {
+            System.out.println("BLUE");
+        }
+    else if(str1.equals(str2) == true && count != count1)
+        {
+            System.out.println("YELLOW");
+        }
+    else if(s1.equals(s2) == false)
+        {
+            System.out.println("GREEN");
+        }
+    }
+}
