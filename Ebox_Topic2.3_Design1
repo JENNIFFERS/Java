@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Ebox_Topic2.3_Design1{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Arguments :");
+        int count =0;
+        for(String s: args){
+            System.out.println(s);
+            count++;
+        }
+        System.out.println("The number of arguments is " + count);
+    }
+}
