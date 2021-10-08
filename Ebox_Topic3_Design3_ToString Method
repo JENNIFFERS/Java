@@ -1,0 +1,62 @@
+//Ebox_Topic3_Design3_ToString Method
+import java.util.*;
+import java.io.*;
+//Main method
+public class Ebox_Topic3_Design3_ToString Method {
+    public static void main(String[] args) {
+        //Fill your code here
+        String name,street,city;
+        int pincode;
+        Scanner e = new Scanner(System.in);
+        System.out.println("Enter the name");
+        name = e.nextLine();
+        System.out.println("Enter the Address Details");
+        System.out.println("Enter the street");
+        street = e.nextLine();
+        System.out.println("Enter the city");
+        city = e.nextLine();
+        System.out.println("Enter the pincode");
+        pincode = e.nextInt();
+        Address a = new Address(street,city,pincode);
+        Customer c = new Customer(name,a);
+        c.tostring();
+        
+    }
+}
+//Address.java
+class Address  {
+    String street, city;
+    int pincode;
+    
+    Address () {
+    }
+    
+    Address (String street, String city, int pincode) {
+        this.street = street;
+        this.city = city;
+        this.pincode = pincode;
+    }
+    
+    //Fill your code here
+    public String toString(){
+        return street+","+city+"-"+pincode;
+    }
+}
+//Customer.java
+class Customer{
+    String name;
+    Address address;
+
+//Customer (){
+
+
+Customer(String name, Address address){
+    this.name = name;
+    this.address = address;
+}
+//Fill your code here
+public void tostring(){
+    System.out.println(name+" "+address.toString());
+
+}
+}
