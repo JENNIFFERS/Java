@@ -1,0 +1,10 @@
+import java.util.Scanner;
+class Ebox_Topic2.2_Design3{
+    public static void main(String[] args){
+        String d;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the name:");
+        d=sc.nextLine();
+        System.out.println("Name:" +d.toUpperCase());
+    }
+}
