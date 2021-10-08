@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Ebox_Topic2.2_Design5{
+    public static void main(String[] args){
+        String a,b;
+        char ch='"';
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the string");
+        a= sc.nextLine();
+        System.out.println("Enter the start string");
+        b=sc.nextLine();
+        if(a.startsWith(b))
+        {
+            System.out.println(ch+a+ch+" starts with "+ch+b+ch);
+        }
+        else
+        {
+            System.out.println(ch+a+ch+" does not start with "+ch+b+ch);
+        }
+    }
+}
