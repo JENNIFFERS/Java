@@ -1,0 +1,13 @@
+import java.io.*;
+import java.util.*;
+//Main method
+class Ebox_Topic1.1_Design1
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Welcome to Java World!!!");
+        
+    }
+    
+
+}
