@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Ebox_Topic2.1_Design3
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int r,c,i,j;
+        r = sc.nextInt();
+        c = sc.nextInt();
+        int matrix[][]= new int[r][c];
+        for(i=0;i<r;i++)
+        {
+        for(j=0;j<c;j++)
+        {
+            matrix[i][j] = sc.nextInt();
+        }
+        }
+        int min = Integer.MAX_VALUE;
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                if(matrix[i][j]<=min)
+                min=matrix[i][j];
+            }
+        }
+        System.out.println("The minimum element is "+min);
+    }
+}
