@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Java_array_problem1 {
+	            static Scanner sc = new Scanner(System.in);
+				private ArrayList<Integer> A1 = new ArrayList<Integer>();
+				
+				public ArrayList<Integer> storeEvenNumbers(int N) {
+					A1 = new ArrayList<Integer>();
+					
+					for (int i = 2; i <= N; i++) {
+						if (i % 2 == 0) A1.add(i);
+					}
+					
+					return A1;
+				}
+				
+				public ArrayList<Integer> printEvenNumbers() {
+					ArrayList<Integer> A2 = new ArrayList<Integer>();
+					
+					for (int j : A1) {
+						A2.add(j * 2);
+						System.out.println(j * 2);
+					}
+					
+					return A2;
+				}
+				public ArrayList<Integer> retriveEvenNumbers(int S) 
+				{
+					if(A1.contains(S))
+					{
+						System.out.println(S);
+					}
+					else
+					{
+						System.out.println("0");
+					}
+					return A1;
+				}
+
+				public static void main(String[] args) {
+					Java_array_problem1 a = new Java_array_problem1();
+					System.out.println("Enter value of N");
+					int n = sc.nextInt();
+					a.storeEvenNumbers(n);
+					System.out.println("Elements of Arraylist A2 are: ");
+					a.printEvenNumbers();
+					System.out.println("Enter the search number");
+					int s = sc.nextInt();
+					a.retriveEvenNumbers(s);
+					
+
+				}
+}
+			
