@@ -1,0 +1,40 @@
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+ public class Java_array_problem2 {
+	 static Java_array_problem2 c = new Java_array_problem2();
+	 HashSet<String> H1 = new HashSet<>();
+	 public HashSet<String> storeCountryNames(String CountryName) 
+	 {
+		
+			H1.add(CountryName);
+		
+			return H1;
+	 }
+public String retriveCountry(String CountryName) 
+{
+	  Iterator<String> it = H1.iterator();
+	  while (it.hasNext())
+	       {
+		  if (it.next().equals(CountryName))
+			  return CountryName;
+			}
+			
+			return null;
+		}
+   public static void main (String []args){
+		c.storeCountryNames("India");
+		c.storeCountryNames("USA");
+		c.storeCountryNames("Germany");
+		c.storeCountryNames("France");
+		c.storeCountryNames("Japan");
+
+		System.out.println("India: " + c.retriveCountry("India"));
+		System.out.println("China: " + c.retriveCountry("China"));		
+	}
+
+	
+}
+
+
